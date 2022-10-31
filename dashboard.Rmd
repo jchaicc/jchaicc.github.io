@@ -1,0 +1,77 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+
+
+```{r}
+library(ggridges) 
+library(patchwork) 
+library(dplyr)
+library(knitr)
+library(p8105.datasets)
+library(tidyverse)
+library(plotly)
+library(flexdashboard)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+```{r}
+data("instacart")
+
+instacart_pro =
+  instacart %>%
+  janitor::clean_names() %>%
+  filter(
+    department == "produce"
+  )
+
+as_plot=
+  instacart_pro %>%
+  group_by(aisle) %>%
+  summarize(
+    obs=n()) %>%
+  mutate(aisle=fct_reorder(aisle,obs)) %>%
+   plot_ly(x = ~aisle, y = ~obs, color = ~aisle, type = "bar")
+
+ as_plot
+  
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+### Chart B
+```{r}
+  box_plot=
+  instacart%>%
+  filter(department=="dairy eggs")%>%
+  mutate(
+    aisle = fct_reorder(aisle,days_since_prior_order)) %>% 
+ plot_ly(y = ~days_since_prior_order, color = ~aisle, type = "box", colors = "viridis")
+box_plot
+
+
+
+```
+
+### Chart C
+```{r}
+scat_plot=
+  instacart %>%
+  count(aisle) %>% 
+  filter(n > 10000) %>% 
+  mutate(aisle = fct_reorder(aisle, n)) %>% 
+  mutate(text_label = str_c("obs:", n)) %>%
+  plot_ly(x = ~aisle, y = ~n,type="scatter",text = ~text_label)
+scat_plot
+   
+  
+```
+                
