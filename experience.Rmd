@@ -1,0 +1,76 @@
+---
+title: "Academic and Professional Experiences"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    
+---
+
+**Education**
+
+
+Columbia University     New York, United States               (Sept.2022-present)
+
+*Master of Biostatistics*
+
+University of Alberta   Edmonton, Canada                      (Sept.2017-April.2022)
+
+*Bachelor of Commerce*
+
+*Bechelor of Science in Mathematics, Minor in Statistics*
+
+
+**Work Experience**   
+
+
+**Merk KGaA**
+
+*Data Analysis Intern*
+
+Beijing, China                                                (June 2018 - Sept. 2018）
+
+ * Collected 500+ pieces of customer feedback on a specific drug from questionnaires 
+ * Implemented data entry, cleaning, sorting, and analysis with Excel & R 
+ * Estimated the customers’ preferences and drug effects, visualized analysis results using R to identify drug effectiveness
+ 
+ **Research Experience**
+ 
+ 
+ **The Impact of Children BMI on Asthma**
+ 
+ *Group Leader, Undergraduate Research Program*
+ 
+ Edmonton, Canada                                             (July 2021 - Nov. 2021)
+ 
+ * Collected 2,386 patients’ data from NHANES database, ran Logistic regression to investigate the association between asthma and risk factors such as age, ethnicity, gender, BMI, atopic comorbidity 
+ * Visualized the results using R and identified that BMI has a significant relationship with asthma
+ * Conducted meta-analysis after splitting the dataset into 6 groups by sex and BMI range to assess the difference in BMI; calculated the corresponding 95% confidence interval and OR, concluding that young boys with higher BMI are more likely to develop asthma
+ 
+ 
+ **Yellow Fever in Senegal Modelling**
+ 
+ *Undergraduate Student Research Project guided by Prof. Hao Wang*
+ 
+ Edmonton, Canada                                             (Jan. 2021 - May 2021)
+ 
+ * Led a team of 3 to model the Yellow Fever epidemic that occurred in Senegal in 2002 with a human population of 10.28 million by constructing a deterministic model reflecting both mosquitoes and people status, improved the model fitness by 34% in terms of RMSE
+ * Used R to conduct sensitivity analysis and phase line analysis to identify factors affecting the spread of the disease and the steady state of the recovered human population after vaccination
+ * Calculated the minimum vaccination rate required to control the disease, forwarded solutions and recommendations on how to control the epidemic; completed a 31-page report with a presentation
+ 
+ 
+ **The Prognostic and Metastasis Behavior of Breast Cancer Subtypes**
+ 
+ *Research Assistant, Supervised by Dr. Chang Liu*
+ 
+ Edmonton, Canada                                             (Aug. 2020 - Dec. 2020)
+ 
+ * Analyzed clinical data of thousands of breast cancer patients using R
+ * Built Cox proportional hazards model to determine the prognostic factors that have an overall impact on patients’ survival, and made predictions on tumor incidence rate
+ * Applied restricted mean survival time to summarize the survival profile of breast cancer patients
+ * Performed logistic regression to classify whether a tumor was benign or malignant based on 
+ * factors such as age, tumor size, family history, and weight
+
+ **Publication**
+ 
+ Jingchen Chai, Zhijie Duan, Linshuo Yang. Juvenile Asthma in the U.S. Relate Asthma Incidence to Body Mass Index, 2021 International Conference on Biological Engineering, Healthcare and Sustainability (ICBEHS2021), Shanghai, China, November 12-14, 2021. 

@@ -1,5 +1,5 @@
 ---
-title: "My awesome website"
+title: "About me"
 output: 
   html_document:
     toc: true
@@ -7,8 +7,11 @@ output:
     
 ---
 
-Welcome to Jingchen's website! Feel free to browse around!
+My name is Jingchen Chai, a first year student in the Master of Biostatistics program.
+
+I'm originally from China, in my free time, I like travelling. Take a look at the 
+picture below I took in Switzerland!
 
 <center>
-<img src="images/fig2.jpg" height="400px" width="500px" />
+<img src="images/fig1.jpg" height="400px" width="400px" />
 </center>
