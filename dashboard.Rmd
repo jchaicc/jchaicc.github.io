@@ -19,11 +19,25 @@ library(plotly)
 library(flexdashboard)
 ```
 
+```{r,include=FALSE}
+data("instacart")
+head(instacart)
+
+instacart_pro =
+  instacart %>%
+  janitor::clean_names() %>%
+  filter(
+    department == "produce"
+  )
+
+```
+
+
 Column {data-width=650}
 -----------------------------------------------------------------------
 
 ### Chart A
-```{r,message=FALSE}
+```{r}
 data("instacart")
 head(instacart)
 
