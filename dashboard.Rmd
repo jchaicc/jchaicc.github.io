@@ -21,8 +21,6 @@ library(flexdashboard)
 
 ```{r,include=FALSE}
 data("instacart")
-head(instacart)
-
 instacart_pro =
   instacart %>%
   janitor::clean_names() %>%
@@ -38,15 +36,6 @@ Column {data-width=650}
 
 ### Chart A
 ```{r}
-data("instacart")
-head(instacart)
-
-instacart_pro =
-  instacart %>%
-  janitor::clean_names() %>%
-  filter(
-    department == "produce"
-  )
 
 as_plot=
   instacart_pro %>%
