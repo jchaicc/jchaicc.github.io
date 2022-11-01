@@ -25,6 +25,7 @@ Column {data-width=650}
 ### Chart A
 ```{r}
 data("instacart")
+head(instacart)
 
 instacart_pro =
   instacart %>%
@@ -39,7 +40,10 @@ as_plot=
   summarize(
     obs=n()) %>%
   mutate(aisle=fct_reorder(aisle,obs)) %>%
-   plot_ly(x = ~aisle, y = ~obs, color = ~aisle, type = "bar")
+   plot_ly(x = ~aisle, y = ~obs, color = ~aisle, type = "bar") %>%
+  layout(title = 'Distribution of the aisle in the produce department',
+         xaxis = list(title = 'Aisle', zeroline = FALSE),
+         yaxis = list(title = 'count', zeroline = FALSE))
 
  as_plot
   
@@ -50,15 +54,16 @@ Column {data-width=350}
 ### Chart B
 ```{r}
   box_plot=
-  instacart%>%
-  filter(department=="dairy eggs")%>%
-  mutate(
-    aisle = fct_reorder(aisle,days_since_prior_order)) %>% 
- plot_ly(y = ~days_since_prior_order, color = ~aisle, type = "box", colors = "viridis")
+  instacart %>%
+  filter(department=="dairy eggs") %>%
+  mutate(aisle=fct_reorder(aisle,days_since_prior_order)) %>%
+  plot_ly(y=~days_since_prior_order,color=~aisle,type="box",colors="viridis") %>%
+  layout(title = 'Distribution of the days since prior order for the ailes
+         in the dairy eggs department',
+         xaxis = list(title = 'Aisle', zeroline = FALSE),
+         yaxis = list(title = 'Days since prior order', zeroline = FALSE))
 box_plot
-
-
-
+  
 ```
 
 ### Chart C
@@ -69,7 +74,10 @@ scat_plot=
   filter(n > 10000) %>% 
   mutate(aisle = fct_reorder(aisle, n)) %>% 
   mutate(text_label = str_c("obs:", n)) %>%
-  plot_ly(x = ~aisle, y = ~n,type="scatter",text = ~text_label)
+  plot_ly(x = ~aisle, y = ~n,type="scatter",text = ~text_label) %>%
+  layout(title = 'Numbers of items orered in each order',
+         xaxis = list(title = 'Aisle', zeroline = FALSE),
+         yaxis = list(title = 'count', zeroline = FALSE))
 scat_plot
    
   
