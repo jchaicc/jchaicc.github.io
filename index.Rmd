@@ -12,3 +12,6 @@ Welcome to Jingchen's website! Feel free to browse around!
 <center>
 <img src="images/fig2.jpg" height="400px" width="500px" />
 </center>
+
+Here's a direct link to the about page: [about](about.html).
+And also my [experience](experience.html) page.
