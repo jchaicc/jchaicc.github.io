@@ -36,7 +36,6 @@ Column {data-width=650}
 
 ### Chart A
 ```{r}
-
 as_plot=
   instacart_pro %>%
   group_by(aisle) %>%
