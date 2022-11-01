@@ -59,11 +59,7 @@ Column {data-width=450}
   instacart %>%
   filter(department=="dairy eggs") %>%
   mutate(aisle=fct_reorder(aisle,days_since_prior_order)) %>%
-  plot_ly(y=~days_since_prior_order,color=~aisle,type="box",colors="viridis") %>%
-  layout(title = 'Distribution of the days since prior order for the ailes
-         in the dairy eggs department',
-         xaxis = list(title = 'Aisle', zeroline = FALSE),
-         yaxis = list(title = 'Days since prior order', zeroline = FALSE))
+  plot_ly(y=~days_since_prior_order,color=~aisle,type="box",colors="viridis")
 box_plot
   
 ```
